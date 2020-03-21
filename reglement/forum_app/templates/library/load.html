@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>load libraries</title>
+{% endblock %}
+
+{%block body%}
+<nav class="navbar navbar-expand-lg float-right">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
+      
+    </div>
+    <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
+      <span class="text-primary mr-2">
+          Hello- {{request.user}}
+      </span>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <a href="{% url 'logout'%}" class="nav-link">logout</a>
+            </button>
+          </form>
+      </div>
+  </nav>
+{% endblock %}

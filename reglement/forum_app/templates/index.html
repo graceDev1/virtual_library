@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{%block body%}
+<nav class="navbar navbar-expand-lg float-right">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
+      
+    </div>
+    <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
+        <form class="form-inline my-2 my-lg-0 mr-2">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              <a href="{% url 'login'%}" class="nav-link">Sign in</a>
+          </button>
+        </form>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <a href="{% url 'register'%}" class="nav-link">Sign up</a>
+            </button>
+          </form>
+      </div>
+  </nav>
+{% endblock %}
