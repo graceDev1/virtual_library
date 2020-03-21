@@ -39,7 +39,7 @@ def loginPage(request):
             user = authenticate(request, username=username, password=password)
 
             if user is not None:
-                login(request, username)
+                login(request, user)
                 return redirect('load')
             else:
                 messages.info(request,"username or password incorrect")
@@ -49,7 +49,7 @@ def loginPage(request):
 
 
 def logoutPage(request):
-
+    logout(request)
     return redirect('index')
 
 @login_required(login_url='login')
